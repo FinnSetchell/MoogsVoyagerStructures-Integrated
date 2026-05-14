@@ -20,20 +20,23 @@
       "modrinth": "${mod_modrinth}"
     },
     "license": "GNU Lesser General Public License v3.0",
-    "icon": "assets/mvs/icon.png",
+    "icon": "assets/mvsintegrated/icon.png",
     "environment": "*",
     "depends": {
       "fabric-resource-loader-v0": "*",
-      "moogs_structures": "*"
+      "moogs_structures": "*",
+      "mvs": "*",
+      "supplementaries": "*",
+      "amendments": "*"
     },
     "custom": {
       "modmenu": {
         "links": {
-          "mvs.releases": "${mod_releases}",
+          "mvsintegrated.releases": "${mod_releases}",
           "modmenu.discord": "${mod_discord}",
-          "mvs.kofi": "${mod_kofi}",
-          "mvs.curseforge": "${mod_curseforge}",
-          "mvs.modrinth": "${mod_modrinth}"
+          "mvsintegrated.kofi": "${mod_kofi}",
+          "mvsintegrated.curseforge": "${mod_curseforge}",
+          "mvsintegrated.modrinth": "${mod_modrinth}"
         },
         "parent": "moogs_structures",
         "update_checker": true

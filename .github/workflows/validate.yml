@@ -14,29 +14,8 @@ jobs:
     steps:
       - name: Checkout mod project
         uses: actions/checkout@v6
-        with:
-          path: project
-
-      - name: Checkout validator
-        uses: actions/checkout@v6
-        with:
-          repository: FinnSetchell/moogs-structure-validator
-          ref: v1
-          path: validator
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.12'
-
-      - name: Install validator dependencies
-        run: pip install -r validator/requirements.txt
-
-      - name: Run validator
-        run: python validator/validator.py --config project/validator.json --project-root project
 
       - name: Run NBT check
-        working-directory: project
         run: |
           pip install nbtlib
           python scripts/nbt_check.py

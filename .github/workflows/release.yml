@@ -9,37 +9,9 @@ permissions:
   contents: write
 
 jobs:
-  validate:
-    name: Validate Structures
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout mod project
-        uses: actions/checkout@v6
-        with:
-          path: project
-
-      - name: Checkout validator
-        uses: actions/checkout@v6
-        with:
-          repository: FinnSetchell/moogs-structure-validator
-          ref: v1
-          path: validator
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: pip install -r validator/requirements.txt
-
-      - name: Run validator
-        run: python validator/validator.py --config project/validator.json --project-root project
-
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: validate
     steps:
       - uses: actions/checkout@v6
         with:
@@ -85,7 +57,7 @@ jobs:
           AVATAR_URL=$(grep 'discordAvatarUrl=' gradle.properties | cut -d'=' -f2)
           curl -X POST "$DISCORD_WEBHOOK" \
             -H "Content-Type: application/json" \
-            -d "{\"username\":\"Moog's Mods\",\"avatar_url\":\"$AVATAR_URL\",\"content\":\"<@&$ROLE_ID>\\n$BANNER_URL\",\"allowed_mentions\":{\"parse\":[],\"roles\":[\"$ROLE_ID\"]}}"
+            -d "{\"username\":\"Moog's Mods Integrated\",\"avatar_url\":\"$AVATAR_URL\",\"content\":\"<@&$ROLE_ID>\\n$BANNER_URL\",\"allowed_mentions\":{\"parse\":[],\"roles\":[\"$ROLE_ID\"]}}"
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 

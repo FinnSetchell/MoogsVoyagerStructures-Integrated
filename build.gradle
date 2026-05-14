@@ -119,6 +119,15 @@ publishMods {
         requires {
             slug = "moogs-structure-lib"
         }
+        requires {
+            slug = "moogs-voyager-structures"
+        }
+        requires {
+            slug = "supplementaries"
+        }
+        requires {
+            slug = "amendments"
+        }
     }
 
     curseforge {
@@ -133,12 +142,15 @@ publishMods {
         }
         extraMcVersions.each { minecraftVersions.add(it) }
         requires("moogs-structure-lib")
+        requires("moogs-voyager-structures")
+        requires("supplementaries")
+        requires("amendments")
     }
 
     discord {
         webhookUrl = providers.environmentVariable('DISCORD_WEBHOOK')
         dryRunWebhookUrl = providers.environmentVariable('DISCORD_WEBHOOK_DRY_RUN').orElse('')
-        username = "Moog's Mods"
+        username = "Moog's Mods Integrated"
 
         content = changelog.map { text ->
             def prefix = project.findProperty('publishDisplayPrefix')
@@ -206,7 +218,7 @@ ${changelogText.trim()}
         def embed = [title: "[PREVIEW] ${modName} ${project.version}", description: description, color: colorInt]
         if (thumb) embed.thumbnail = [url: thumb]
 
-        def payload = [username: "Moog's Mods (preview)", avatar_url: avatarUrl, embeds: [embed]]
+        def payload = [username: "Moog's Mods Integrated (preview)", avatar_url: avatarUrl, embeds: [embed]]
         def json = groovy.json.JsonOutput.toJson(payload)
 
         def conn = (HttpURLConnection) new URL(webhookUrl).openConnection()

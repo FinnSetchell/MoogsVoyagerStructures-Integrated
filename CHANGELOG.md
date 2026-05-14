@@ -2,44 +2,12 @@
 
 ---
 
-## [5.0.9] - 2026-05-01
+## [1.0.0] - 2026-05-10
 
-### Fixed
-- `minecraft:iron_chain` replaced with `minecraft:chain` in pre-1.21.9 structure variants for azelea house, large floating island, large warped tower, big oak tree, small ship, and nether well
-
-### Changed
-- All empty and hardcoded containers now have loot tables assigned
-- Added new `pond` and `end_scraps` loot tables
-
----
-
-## [5.0.8] - 2026-04-20
-
-### Fixed
-- Cherry, crimson, mangrove, and dark oak biome tags now resolve correctly on 1.21.3-1.21.4
-
----
-
-## [5.0.7] - 2026-04-20
-
-### Fixed
-- Mineshaft now generates properly
-
-### Changed
-- Mineshaft is now half as rare
-
----
-
-## [5.0.6] - 2026-04-20
-
-### Fixed
-- Fixed chain renamed issues for 1.21.9+
-- Fixed template pool elements using wrong type field (element_type)
-- Repaired a few cathedral NBTs
-- Repaired various structures
-- Fixed mod icon not displaying in Mod Menu
-
-### Changed
-- Added description and links to mod metadata
+### Added
+- Initial release of Moog's Voyager Structures Integrated
+- Forked from Moog's Voyager Structures v5.0.9
+- Replaced all structures with integrated versions using Supplementaries & Amendments blocks
+- New mod ID `mvsintegrated` to coexist with the original MVS
 
 ---
