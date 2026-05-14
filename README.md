@@ -1,4 +1,4 @@
-![Header](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/5c5d18abaed94e2cb27806d31a513555.png)
+![header](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/e246656e996f4c2cbcefc7a4846ecddc.png)
 
 86+ integrated structure variants using blocks from Supplementaries and Amendments. A companion addon to Moog's Voyager Structures.
 
