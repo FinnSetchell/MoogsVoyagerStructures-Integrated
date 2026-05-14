@@ -26,7 +26,12 @@ def _read_mod_id() -> str:
 
 
 MOD_ID = _read_mod_id()
-DATA_ROOT = PROJECT_ROOT / "src" / "main" / "resources" / "data" / MOD_ID
+
+# The mod ID is "mvsintegrated" but structures live under the "mvs" namespace
+# (we override MVS's originals rather than using our own namespace).
+# Check for a data/<modId> folder first; fall back to "mvs".
+_candidate = PROJECT_ROOT / "src" / "main" / "resources" / "data" / MOD_ID
+DATA_ROOT = _candidate if _candidate.exists() else PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs"
 
 
 def _pick(*names: str) -> Path:
