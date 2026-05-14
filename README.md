@@ -1,5 +1,13 @@
 ![header](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/e246656e996f4c2cbcefc7a4846ecddc.png)
 
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D8LKA5N)
+
+[![Discord](https://img.shields.io/discord/869218732650688543?color=1A6E8A&label=DISCORD&style=for-the-badge)](https://discord.com/invite/S5nffJbuvA)
+
+[![My projects](https://img.shields.io/badge/CurseForge-projects-1A6E8A?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/members/finndog_123/projects)
+
+[![My projects](https://img.shields.io/badge/Modrinth-projects-1A6E8A?style=for-the-badge&logo=modrinth)](https://modrinth.com/user/FinnSetchell)
+
 86+ integrated structure variants using blocks from Supplementaries and Amendments. A companion addon to Moog's Voyager Structures.
 
 This mod works on Fabric, Forge and NeoForge.
