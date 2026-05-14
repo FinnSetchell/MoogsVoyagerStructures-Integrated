@@ -1,15 +1,26 @@
-![image](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/60ee4662bf314681af458b6aae3ef9f2.png)
+![Header](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/5c5d18abaed94e2cb27806d31a513555.png)
 
 86+ integrated structure variants using blocks from Supplementaries and Amendments. A companion addon to Moog's Voyager Structures.
 
 This mod works on Fabric, Forge and NeoForge.
 
-![image](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/aad5031f8f884f4ebff6ca088013a33b.png)
+![overview](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/5fc7a615fe2c4a3fa91f5cd39a8f7211.png)
+
 MVSI is an addon for [Moog's Voyager Structures](https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures) that replaces its vanilla-block structures with versions that incorporate blocks from [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries) and [Amendments](https://www.curseforge.com/minecraft/mc-mods/amendments). Once all the required mods are installed, the integrated variants load automatically in place of the standard ones. No configuration needed.
 
 This is a data-only mod. No new items, no crafting recipes, no code. It just swaps in richer structure templates when the right mods are present.
 
-![image](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/8a458597aa7a4674bd866792f7c7623a.png)
+**Vision**
+
+The goal of MVSI is to integrate as many mods as possible into Moog's Voyager Structures. For each supported mod, we take the base MVS structures and revamp them using that mod's blocks and entities. When a structure spawns in your world, MVSI uses template pools to randomly choose between the available integrated variants based on which mods you have installed, so the more mods you run, the more variety you get.
+
+Currently only Supplementaries and Amendments are supported, so both are required. In the future we plan to expand support to many more mods, and no single mod will be required. MVSI will simply enhance structures with whatever compatible mods are present.
+
+Want to help integrate your favourite mod? Reach out on [Discord](https://discord.gg/S5nffJbuvA)!
+
+
+![showcase](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/96023d00150142ea840a8c80a636de80.png)
+
 Integrated variants across all the main MVS structure categories:
 
 - Benches and seating (small and medium variants)
@@ -24,7 +35,8 @@ Integrated variants across all the main MVS structure categories:
 - Pathways
 - Miscellaneous (gallows, railway, shed, small pillager tower, small ship, beach bar, horse pen, and more)
 
-![image](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/f0cb72b2bdbf47a88d4739951ba12974.png)
+![requirements](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/5f0e5d75f8f94e1c800ff87e3f548097.png)
+
 All four of the following must be installed:
 
 - [Moog's Voyager Structures](https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures) (MVS)
@@ -34,12 +46,14 @@ All four of the following must be installed:
 
 MVSI coexists alongside MVS. **Both** need to be in your mods folder.
 
-![image](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/ee5dde58dad24b068a3780e3727a39f1.png)
+![modpacks](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/2007432d1f894565ba4e24ca79345a0c.png)
+
 Feel free to include this mod in modpacks. No special permission needed.
 
-View all modpacks using this mod [here](https://www.modpackindex.com/modpack/finder)
+View all modpacks using this mod [here](https://www.modpackindex.com/modpack/finder?included_mods=108190)
 
-![image](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/983d4ecf22fe4f00b27099344ea0950e.png)
+![support](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/8305cf3c437d442180dd2f274c663b2c.png)
+
 The best way to get a reply is to join the Discord server.
 
 - [Discord](https://discord.gg/S5nffJbuvA)
@@ -53,3 +67,6 @@ The best way to get a reply is to join the Discord server.
 - FinnDog - author
 - AlmdudlerKing - builder
 - Structures built on [Moog's Voyager Structures](https://github.com/Moog-s-Mods/MoogsVoyagerStructures)
+
+
+![BH promo banner](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/5adaa97241b44a76a158b8977066d8da.png)
