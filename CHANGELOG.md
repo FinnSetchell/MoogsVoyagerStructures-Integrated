@@ -2,9 +2,10 @@
 
 ---
 
-## [1.0.2] - 2026-05-14
+## [1.0.2] - 2026-05-15
 
-_Pending. Update this header date and replace this line with the actual changes before tagging._
+### Fixed
+- Apostrophe in mod description caused a TOML parse error preventing the jar from loading (`Invalid entry separator 's' in inline table`); removed apostrophe from description text
 
 ---
 
