@@ -103,6 +103,7 @@ jobs:
           IFS='.' read -r -a P <<< "$OLD"
           NEW="${P[0]}.${P[1]}.$((P[2]+1))"
           sed -i "s|^modVersion=.*$|modVersion=${NEW}|" gradle.properties
+          sed -i "s|^discordPing=.*$|discordPing=true|" gradle.properties
           NEW_VERSION="$NEW" RELEASE_DATE="$TODAY" python3 .github/scripts/post_release_bump.py
           git add gradle.properties CHANGELOG.md
           git commit -m "Post-release: bump ${OLD} → ${NEW} + stub CHANGELOG section"
