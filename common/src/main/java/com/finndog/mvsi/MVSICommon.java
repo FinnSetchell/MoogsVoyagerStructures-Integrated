@@ -1,6 +1,7 @@
 package com.finndog.mvsi;
 
 import com.finndog.mvsi.merger.PoolAdditionsMerger;
+import com.finndog.mvsi.modinit.MVSIProcessors;
 import net.minecraft.server.MinecraftServer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +11,7 @@ public class MVSICommon {
     public static final Logger LOGGER = LogManager.getLogger();
 
     public static void init() {
+        MVSIProcessors.init();
     }
 
     /**
