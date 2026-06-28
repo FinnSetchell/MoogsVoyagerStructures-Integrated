@@ -1,0 +1,58 @@
+modLoader = "javafml"
+loaderVersion = "${forge_loader_version_range}"
+license = "GNU Lesser General Public License v3.0"
+issueTrackerURL = "${mod_homepage}/issues"
+showAsResourcePack = false
+
+[[mods]]
+    modId = "${mod_id}"
+    logoFile = "assets/mvsintegrated/icon.png"
+    logoBlur = false
+    version = "${version}"
+    displayName = "${mod_name}"
+    displayURL = "${mod_homepage}"
+    authors = "FinnDog"
+    credits = "Built by Phantax and AlmdudlerKing"
+    description = '''${mod_description}'''
+
+[[dependencies.mvsintegrated]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "${forge_loader_version_range}"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.mvsintegrated]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.21,1.22)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.mvsintegrated]]
+    modId = "moogs_structures"
+    mandatory = true
+    versionRange = "${structure_lib_version_range}"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.mvsintegrated]]
+    modId = "mvs"
+    mandatory = true
+    versionRange = "[1.0.0,)"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[dependencies.mvsintegrated]]
+    modId = "supplementaries"
+    mandatory = false
+    versionRange = "[1.0.0,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.mvsintegrated]]
+    modId = "amendments"
+    mandatory = false
+    versionRange = "[1.0.0,)"
+    ordering = "NONE"
+    side = "BOTH"

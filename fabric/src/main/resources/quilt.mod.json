@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "com.finndog",
+    "id": "${mod_id}",
+    "version": "${version}",
+    "metadata": {
+      "name": "${mod_name}",
+      "description": "${mod_description}",
+      "contributors": {
+        "FinnDog": "Owner",
+        "Phantax": "Contributor",
+        "AlmdudlerKing": "Contributor"
+      },
+      "contact": {
+        "homepage": "${mod_homepage}",
+        "sources": "${mod_sources}",
+        "issues": "${mod_issues}",
+        "discord": "${mod_discord}",
+        "ko-fi": "${mod_kofi}",
+        "curseforge": "${mod_curseforge}",
+        "modrinth": "${mod_modrinth}"
+      },
+      "icon": "assets/mvsintegrated/icon.png",
+      "license": "LGPL-3.0-only"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "main": [
+        "com.finndog.mvsi.fabric.MVSIFabric"
+      ]
+    },
+    "modmenu": {
+      "links": {
+        "mvsintegrated.releases": "${mod_releases}",
+        "modmenu.discord": "${mod_discord}",
+        "mvsintegrated.kofi": "${mod_kofi}",
+        "mvsintegrated.curseforge": "${mod_curseforge}",
+        "mvsintegrated.modrinth": "${mod_modrinth}"
+      },
+      "parent": "moogs_structures",
+      "update_checker": true
+    },
+    "depends": [
+      {
+        "id": "quilt_resource_loader",
+        "versions": "*",
+        "unless": "fabric-resource-loader-v0"
+      },
+      {
+        "id": "moogs_structures",
+        "versions": "*"
+      },
+      {
+        "id": "mvs",
+        "versions": "*"
+      },
+      {
+        "id": "supplementaries",
+        "versions": "*",
+        "optional": true
+      },
+      {
+        "id": "amendments",
+        "versions": "*",
+        "optional": true
+      }
+    ]
+  }
+}
