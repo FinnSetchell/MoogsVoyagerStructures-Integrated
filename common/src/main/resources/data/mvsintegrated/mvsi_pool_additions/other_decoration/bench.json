@@ -1,0 +1,81 @@
+{
+  "target_pool": "mvs:other_decoration/bench",
+  "additions": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/medium_bench",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/small_bench_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/small_bench_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/small_bench_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    }
+  ]
+}

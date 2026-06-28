@@ -1,0 +1,24 @@
+{
+  "target_pool": "mvs:well/wells/birch_well/start_pool",
+  "additions": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:well/wells/birch_well",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "target_pool": "mvs:other_decoration/pile",
+  "additions": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/mixed_pile",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/pumpkin_pile",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/small_pumpkin_pile",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    }
+  ]
+}

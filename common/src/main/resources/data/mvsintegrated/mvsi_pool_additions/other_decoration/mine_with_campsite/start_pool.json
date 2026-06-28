@@ -1,0 +1,24 @@
+{
+  "target_pool": "mvs:other_decoration/mine_with_campsite/start_pool",
+  "additions": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:other_decoration/mine_with_campsite",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    }
+  ]
+}

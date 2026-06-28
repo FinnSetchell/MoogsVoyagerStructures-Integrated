@@ -1,0 +1,43 @@
+{
+  "target_pool": "mvs:cathedral/any",
+  "additions": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:cathedral/special/three_way_1",
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:cathedral/special/three_way_2",
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "supplementaries"
+        },
+        {
+          "type": "mvsintegrated:mod_loaded",
+          "modid": "amendments"
+        }
+      ]
+    }
+  ]
+}
