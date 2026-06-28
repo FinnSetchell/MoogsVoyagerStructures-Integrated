@@ -11,9 +11,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
     // Moog's Structure Lib (CurseForge project 1337167, version 1.21.1-3.0.0).
-    // TODO Phase 2: set msl_fabric_file in gradle.properties to the real CurseForge
-    // file id for the MSL 1.21.1-3.0.0 Fabric jar, then uncomment the line below.
-    // modImplementation "curse.maven:moogs-structure-lib-1337167:${msl_fabric_file}"
+    modImplementation "curse.maven:moogs-structure-lib-1337167:${msl_fabric_file}"
 }
 
 loom {
