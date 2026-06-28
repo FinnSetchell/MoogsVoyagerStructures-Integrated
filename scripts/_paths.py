@@ -27,11 +27,17 @@ def _read_mod_id() -> str:
 
 MOD_ID = _read_mod_id()
 
+# Resources live in the `common` sourceset on multiloader repos; datapack-style
+# repos keep them flat under `src/main/resources`. Prefer common, fall back to flat,
+# so the same script works in every Moog's mod repo without modification.
+_common_res = PROJECT_ROOT / "common" / "src" / "main" / "resources"
+RESOURCES_ROOT = _common_res if _common_res.exists() else PROJECT_ROOT / "src" / "main" / "resources"
+
 # The mod ID is "mvsintegrated" but structures live under the "mvs" namespace
 # (we override MVS's originals rather than using our own namespace).
 # Check for a data/<modId> folder first; fall back to "mvs".
-_candidate = PROJECT_ROOT / "src" / "main" / "resources" / "data" / MOD_ID
-DATA_ROOT = _candidate if _candidate.exists() else PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs"
+_candidate = RESOURCES_ROOT / "data" / MOD_ID
+DATA_ROOT = _candidate if _candidate.exists() else RESOURCES_ROOT / "data" / "mvs"
 
 
 def _pick(*names: str) -> Path:
