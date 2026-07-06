@@ -2,7 +2,7 @@
 
 ---
 
-## [1.0.3] - 2026-07-04
+## [2.0.0] - 2026-07-04
 
 ### Changed
 - MVSI now enhances Moog's Voyager Structures instead of overwriting it: integrated variants generate alongside the vanilla structures, chosen at random based on which supported mods are installed, so worlds stay varied and nothing breaks when a mod is missing
