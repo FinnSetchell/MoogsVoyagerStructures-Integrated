@@ -1,0 +1,42 @@
+schema: 1
+mod:
+  id: mvsintegrated
+  displayName: "Moog's Voyager Structures Integrated"
+  environments: [Server]   # Modrinth: client_side unsupported / server_side required; every live CF file carries the "Server" tag
+  name: MoogsVoyagerStructuresIntegrated
+  # There is no validator.json on this repo and validate.yml only runs
+  # scripts/nbt_check.py (no structure validator), so the datapack validator
+  # step must stay off — true would hard-fail every release at tag time.
+  validate: false
+platforms:
+  curseforge: { projectId: 1542803, slug: mvsi-moogs-voyager-structures-integrated }
+  modrinth:   { projectId: cbWB9PF5, slug: mvsi-moogs-voyager-structures-integrated }
+discord:
+  embedColor: "#1A6E8A"
+  avatarUrl: "https://media.forgecdn.net/avatars/thumbnails/1807/288/64/64/639143509979515766.png"
+  bannerUrl: "https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/e246656e996f4c2cbcefc7a4846ecddc.png"
+  pingDefault: false
+# Types taken from the mod's OWN metadata on this branch (fabric.mod.json
+# depends/suggests, neoforge.mods.toml and mods.toml dependency blocks), which
+# agree with the 2.0.0 changelog: MSL and MVS are hard requirements;
+# Supplementaries and Amendments are soft — their variants appear when
+# installed and structures fall back to vanilla when they are not.
+dependencies:
+  - { modrinth: 1oUDhxuy, curseforge: moogs-structure-lib, type: required }        # Moog's Structure Lib
+  - { modrinth: OQAgZMH1, curseforge: moogs-voyager-structures, type: required }   # Moog's Voyager Structures
+  - { modrinth: fFEIiSDQ, curseforge: supplementaries, type: optional }
+  - { modrinth: 6iTJugQR, curseforge: amendments, type: optional }
+artifacts:
+  - type: mod-jar
+targets:
+  # Only 1.21-datapack is wired. 1.20-datapack is still in development and is
+  # deliberately NOT a publish target.
+  - branch: 1.21-datapack
+    # The branch is a compiled multiloader mod against MC 1.21.1 (NeoForge
+    # 21.1.68 / Forge 52.0.28 / fabric-api 0.106.0+1.21.1) and every loader
+    # manifest declares minecraft [1.21,1.21.2). Live 1.0.x uploads carry
+    # exactly ["1.21","1.21.1"].
+    mc: { start: "1.21", end: "1.21.1" }
+    loaders: [fabric, forge, neoforge]
+    java: 21
+    displaySuffix: "[FABRIC + FORGE + NEOFORGE]"

@@ -41,7 +41,7 @@ You **may**:
 
 For permission to use the structure files outside the scope above, contact:
 
-- Discord: see `modDiscord` URL in `gradle.properties`
+- Discord: see `mod_discord` URL in `gradle.properties`
 - GitHub: open an issue on this repository
 
 ## Why dual-license?

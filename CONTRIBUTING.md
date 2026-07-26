@@ -33,8 +33,8 @@ pip install nbtlib
 ## Naming conventions
 
 - Structure NBT filenames are `snake_case`, descriptive, with optional `_top`, `_side`, `_lower` suffixes for jigsaw pieces.
-- Biome tag files live under `data/<modId>/tags/worldgen/biome/has_structure/` and use the form `<biome_category>_biomes.json`.
-- Loot tables live under `data/<modId>/loot_tables/` (1.20) or `data/<modId>/loot_table/` (1.21).
+- Biome tag files live under `data/<mod_id>/tags/worldgen/biome/has_structure/` and use the form `<biome_category>_biomes.json`.
+- Loot tables live under `data/<mod_id>/loot_tables/` (1.20) or `data/<mod_id>/loot_table/` (1.21).
 
 ## Biome tag pattern
 
@@ -69,19 +69,19 @@ Restart the terminal after running `setx` so the new value is visible. Then `.\v
 
 - **Build** (`.github/workflows/build.yml`): runs on every push and PR
 - **Validate** (`.github/workflows/validate.yml`): runs the structure validator on every push and PR (catches issues before release)
-- **Release** (`.github/workflows/release.yml`): triggers on tags `*.*.*-*.*.*` (e.g. `5.0.5-1.20`); builds, validates, publishes to Modrinth + CurseForge + Discord, creates a GitHub Release, and post-bumps the patch version
+- **Release** (`.github/workflows/release.yml`): triggers on tags `<X.Y.Z>-<mc>` (e.g. `2.0.0-1.21`); builds, validates, publishes to Modrinth + CurseForge + Discord, creates a GitHub Release, and post-bumps the patch version
 - **Dependabot**: weekly auto-bumps of GitHub Actions versions
 
 ## Releasing
 
 ```bash
 # After your changes are merged into the version branch:
-git tag 5.0.5-1.20      # format: <modVersion>-<mcVersion>
+git tag 5.0.5-1.20      # format: <mod_version>-<minecraft_version>
 git push origin 5.0.5-1.20
 ```
 
-The release workflow handles everything from there, including auto-bumping `modVersion` in `gradle.properties` after a successful publish so the next release starts at the next patch version.
+The release workflow handles everything from there, including the Discord review card. Bump `mod_version` in `gradle.properties` yourself before tagging.
 
 ## Questions
 
-Discord is the fastest way to reach me. URL is in each mod's `gradle.properties` (`modDiscord=...`).
+Discord is the fastest way to reach me. URL is in each mod's `gradle.properties` (`mod_discord=...`).

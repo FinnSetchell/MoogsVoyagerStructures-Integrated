@@ -4,8 +4,14 @@ plugins {
 }
 
 base {
-    archivesName = "${modId}-${project.name}-${minecraftVersion}"
+    archivesName = "${archives_base_name}-${project.name}-${minecraft_version}"
 }
+
+// `mod_version` / `maven_group` are NOT implicit Gradle properties the way a bare
+// `version=` / `group=` would be — they have to be assigned explicitly or every
+// jar builds as `…-unspecified.jar`.
+version = "${mod_version}"
+group = maven_group
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(java_version as int)
@@ -30,8 +36,8 @@ repositories {
 ['apiElements', 'runtimeElements', 'sourcesElements'].each { variant ->
     configurations."$variant".outgoing {
         capability("$group:${base.archivesName.get()}:$version")
-        capability("$group:$modId-${project.name}-${minecraftVersion}:$version")
-        capability("$group:$modId:$version")
+        capability("$group:$mod_id-${project.name}-${minecraft_version}:$version")
+        capability("$group:$mod_id:$version")
     }
     publishing.publications.configureEach {
         suppressPomMetadataWarningsFor(variant)
@@ -40,23 +46,23 @@ repositories {
 
 sourcesJar {
     from(rootProject.file('LICENSE')) {
-        rename { "${it}_${modName}" }
+        rename { "${it}_${mod_name}" }
     }
 }
 
 jar {
     from(rootProject.file('LICENSE')) {
-        rename { "${it}_${modName}" }
+        rename { "${it}_${mod_name}" }
     }
     manifest {
         attributes([
-            'Specification-Title'   : modName,
+            'Specification-Title'   : mod_name,
             'Specification-Vendor'  : 'FinnDog',
             'Specification-Version' : project.jar.archiveVersion,
             'Implementation-Title'  : project.name,
             'Implementation-Version': project.jar.archiveVersion,
             'Implementation-Vendor' : 'FinnDog',
-            'Built-On-Minecraft'    : minecraftVersion
+            'Built-On-Minecraft'    : minecraft_version
         ])
     }
 }
@@ -64,19 +70,19 @@ jar {
 processResources {
     var expandProps = [
         'version'                    : version,
-        'mod_name'                   : modName,
-        'mc_version'                 : minecraftVersion,
-        'mod_id'                     : modId,
-        'mod_description'            : modDescription,
-        'mod_homepage'               : modHomepage,
-        'mod_sources'                : modSources,
-        'mod_issues'                 : modIssues,
-        'mod_discord'                : modDiscord,
-        'mod_kofi'                   : modKofi,
-        'mod_curseforge'             : modCurseforge,
-        'mod_modrinth'               : modModrinth,
-        'mod_releases'               : modReleases,
-        'structure_lib_version_range': structureLibVersionRange,
+        'mod_name'                   : mod_name,
+        'mc_version'                 : minecraft_version,
+        'mod_id'                     : mod_id,
+        'mod_description'            : mod_description,
+        'mod_homepage'               : mod_homepage,
+        'mod_sources'                : mod_sources,
+        'mod_issues'                 : mod_issues,
+        'mod_discord'                : mod_discord,
+        'mod_kofi'                   : mod_kofi,
+        'mod_curseforge'             : mod_curseforge,
+        'mod_modrinth'               : mod_modrinth,
+        'mod_releases'               : mod_releases,
+        'structure_lib_version_range': structure_lib_version_range,
         'fabric_version'             : fabric_version,
         'fabric_loader_version'      : fabric_loader_version,
         'neoforge_loader_version_range': neoforge_loader_version_range,
