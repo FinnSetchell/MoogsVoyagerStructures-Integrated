@@ -1,0 +1,18 @@
+{
+  "target_pool": "mvs:houses/prismarine_house_1/start_pool",
+  "additions": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "mvsintegrated:supplementaries_amendments/houses/prismarine_house_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 6,
+      "conditions": [
+        { "type": "mvsintegrated:mod_loaded", "modid": "supplementaries" },
+        { "type": "mvsintegrated:mod_loaded", "modid": "amendments" }
+      ]
+    }
+  ]
+}
