@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:well/rare_well/rare_well_upper",
+        "location": "mvsintegrated:supplementaries_amendments/well/rare_well/rare_well_upper",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

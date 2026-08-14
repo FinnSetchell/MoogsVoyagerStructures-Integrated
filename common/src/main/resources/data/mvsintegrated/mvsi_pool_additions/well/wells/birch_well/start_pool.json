@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:well/wells/birch_well",
+        "location": "mvsintegrated:supplementaries_amendments/well/wells/birch_well",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

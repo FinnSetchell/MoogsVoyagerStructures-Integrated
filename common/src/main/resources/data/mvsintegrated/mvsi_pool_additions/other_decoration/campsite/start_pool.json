@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/campsite",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/campsite",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

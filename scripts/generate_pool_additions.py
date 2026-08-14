@@ -33,6 +33,16 @@ from _paths import RESOURCES_ROOT
 # Favor the integrated variant when both mods are present (easy to retune).
 DEFAULT_WEIGHT = 6
 
+# The integration tier namespaces the NBTs so different mods' variants of the
+# same piece don't collide: NBTs live under `.../structure/<INTEGRATION>/**` and
+# the `location` carries the same segment. Pool-addition JSONs stay FLAT (one
+# file per target pool); each mod's variant is a separate entry in that file's
+# `additions` array, gated on its own CONDITIONS. So re-running for a new mod
+# appends to the existing pool files rather than making a parallel tree.
+# The tier name equals the mod-set in CONDITIONS — keep them in lockstep so the
+# layout documents the gating. To scaffold a new integration, change both.
+INTEGRATION = "supplementaries_amendments"
+
 # Both mods drive the revamp blocks, so additions are gated on both.
 CONDITIONS = [
     {"type": "mvsintegrated:mod_loaded", "modid": "supplementaries"},
@@ -124,7 +134,7 @@ def main() -> None:
             continue
 
         # Move the nbt out of the mvs: override namespace (idempotent).
-        dest = MVSI_STRUCTURE_DIR / f"{rel}.nbt"
+        dest = MVSI_STRUCTURE_DIR / INTEGRATION / f"{rel}.nbt"
         dest.parent.mkdir(parents=True, exist_ok=True)
         if nbt.exists():
             shutil.move(str(nbt), str(dest))
@@ -139,7 +149,7 @@ def main() -> None:
             addition = {
                 "element": {
                     "element_type": "minecraft:single_pool_element",
-                    "location": f"mvsintegrated:{rel}",
+                    "location": f"mvsintegrated:{INTEGRATION}/{rel}",
                     "processors": el["processors"],
                     "projection": el["projection"],
                 },

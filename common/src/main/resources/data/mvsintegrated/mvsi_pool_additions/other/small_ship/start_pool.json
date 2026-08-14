@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:small_ship",
+        "location": "mvsintegrated:supplementaries_amendments/small_ship",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

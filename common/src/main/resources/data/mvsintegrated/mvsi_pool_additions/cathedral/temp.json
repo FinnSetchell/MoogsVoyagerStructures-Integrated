@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:cathedral/base/base",
+        "location": "mvsintegrated:supplementaries_amendments/cathedral/base/base",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

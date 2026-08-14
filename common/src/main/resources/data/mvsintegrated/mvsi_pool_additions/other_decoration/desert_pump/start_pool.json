@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/desert_pump",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/desert_pump",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

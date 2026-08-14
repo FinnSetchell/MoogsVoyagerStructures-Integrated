@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/haystack",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/haystack",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -23,7 +23,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/small_haystack",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/small_haystack",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

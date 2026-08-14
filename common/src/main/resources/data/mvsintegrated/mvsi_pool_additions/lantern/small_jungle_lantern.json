@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:lantern/small_jungle",
+        "location": "mvsintegrated:supplementaries_amendments/lantern/small_jungle",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

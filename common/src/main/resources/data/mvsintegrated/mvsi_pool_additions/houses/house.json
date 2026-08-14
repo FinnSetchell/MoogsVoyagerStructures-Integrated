@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:houses/house",
+        "location": "mvsintegrated:supplementaries_amendments/houses/house",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

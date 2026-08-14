@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/medium_bench",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/medium_bench",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -23,7 +23,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/small_bench_1",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/small_bench_1",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -42,7 +42,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/small_bench_2",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/small_bench_2",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -61,7 +61,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:other_decoration/small_bench_3",
+        "location": "mvsintegrated:supplementaries_amendments/other_decoration/small_bench_3",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:gallows",
+        "location": "mvsintegrated:supplementaries_amendments/gallows",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

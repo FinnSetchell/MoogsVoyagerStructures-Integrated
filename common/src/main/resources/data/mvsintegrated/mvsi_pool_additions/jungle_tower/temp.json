@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:jungle_tower/base",
+        "location": "mvsintegrated:supplementaries_amendments/jungle_tower/base",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

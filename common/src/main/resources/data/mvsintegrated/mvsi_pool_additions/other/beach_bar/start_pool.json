@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:beach_bar",
+        "location": "mvsintegrated:supplementaries_amendments/beach_bar",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:houses/deepslate_house",
+        "location": "mvsintegrated:supplementaries_amendments/houses/deepslate_house",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

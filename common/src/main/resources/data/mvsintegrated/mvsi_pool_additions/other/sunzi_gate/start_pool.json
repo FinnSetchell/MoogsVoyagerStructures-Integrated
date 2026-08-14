@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:sunzi_gate",
+        "location": "mvsintegrated:supplementaries_amendments/sunzi_gate",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:ruins/castle_ruins",
+        "location": "mvsintegrated:supplementaries_amendments/ruins/castle_ruins",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

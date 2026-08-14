@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:small_pillager_tower",
+        "location": "mvsintegrated:supplementaries_amendments/small_pillager_tower",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

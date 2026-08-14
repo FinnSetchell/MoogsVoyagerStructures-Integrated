@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:houses/large_warped_tower",
+        "location": "mvsintegrated:supplementaries_amendments/houses/large_warped_tower",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

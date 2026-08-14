@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:cathedral/special/three_way_1",
+        "location": "mvsintegrated:supplementaries_amendments/cathedral/special/three_way_1",
         "processors": "mvs:cathedral",
         "projection": "rigid"
       },
@@ -23,7 +23,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:cathedral/special/three_way_2",
+        "location": "mvsintegrated:supplementaries_amendments/cathedral/special/three_way_2",
         "processors": "mvs:cathedral",
         "projection": "rigid"
       },

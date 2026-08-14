@@ -4,7 +4,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:nature/long_oak_pathway",
+        "location": "mvsintegrated:supplementaries_amendments/nature/long_oak_pathway",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -23,7 +23,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:nature/short_oak_pathway",
+        "location": "mvsintegrated:supplementaries_amendments/nature/short_oak_pathway",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
