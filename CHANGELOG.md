@@ -2,6 +2,13 @@
 
 ---
 
+## [2.0.1] - 2026-08-16
+
+### Fixed
+- Crash on load with NeoForge and Forge: the `mod_compat_replace` structure processor was registered directly into the already-frozen vanilla registry during mod construction, which those loaders reject. It is now registered through the mod loading registration event. (Fabric was unaffected.)
+
+---
+
 ## [2.0.0] - 2026-08-15
 
 ### Changed
