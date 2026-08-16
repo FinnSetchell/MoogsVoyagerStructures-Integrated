@@ -33,16 +33,20 @@ the Modrinth API (dep availability), and MVSI's own port surface.
 
 ---
 
-## Phase 0 — Go/no-go prerequisites (do first, low-risk research)
+## Phase 0 — Go/no-go prerequisites — DONE (2026-08-16): both GO
 
-- [ ] **MSL 1.20 published?** Confirm MSL has 1.20.1 **Fabric + Forge** builds on CurseForge
-      (project `1337167`); record their file ids for `msl_fabric_file` / `msl_forge_file`.
-      *Hard blocker — without it the port can't compile.* (Primitives themselves are all present on
-      MSL's `1.20-1.20.4` branch with matching names: `StructurePoolAccessor` accessors
-      `moogs_structures_get{Raw}Templates`, `GeneralUtils.getAllDatapacksJSONElement`, pool-element
-      codecs, `BlockAliasCompatCodec`.)
-- [ ] **Block-palette parity.** Audit all 85 NBT palettes against the 1.20.1 Supplementaries/Amendments
-      registries. List any block absent in 3.1.x/2.2.6 → decide swap vs drop per structure.
+- [x] **MSL 1.20 published — CONFIRMED.** CurseForge project `1337167` has 1.20-1.20.4 v3.0.2 builds:
+      **`msl_fabric_file=8419670`**, **`msl_forge_file=8419671`** (no NeoForge). Published version 3.0.2
+      → `structure_lib_version_range=[1.0.0,)` still covers it. Primitives all present on the
+      `1.20-1.20.4` branch (`StructurePoolAccessor` accessors `moogs_structures_get{Raw}Templates`,
+      `GeneralUtils.getAllDatapacksJSONElement`, pool-element codecs, `BlockAliasCompatCodec`).
+- [x] **Block-palette parity — GO with 1 caveat.** 85 NBTs use 45 distinct modded blocks
+      (40 Supplementaries + 5 Amendments). **43/45 exist on 1.20.1** (Supp 3.1.43 / Amendments 2.2.6).
+      The 2 exceptions are only in **`houses/warped_house.nbt`**: `supplementaries:bunting_green`
+      (`axis=z`) and `supplementaries:bunting_wall_green` (`facing=west`). 1.20.1 has buntings as a
+      single unified `supplementaries:rope_buntings` (multipart blockstate; color stored in a block
+      entity, not the block id). **Phase 4 special-case:** map both → `rope_buntings` with a green
+      block-entity color (adding a block entity), or simplify warped_house's bunting decoration.
 
 ## Phase 1 — Build system (mirror MSL 1.20)
 
