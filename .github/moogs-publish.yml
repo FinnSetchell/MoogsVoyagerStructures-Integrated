@@ -29,8 +29,6 @@ dependencies:
 artifacts:
   - type: mod-jar
 targets:
-  # Only 1.21-datapack is wired. 1.20-datapack is still in development and is
-  # deliberately NOT a publish target.
   - branch: 1.21-datapack
     # The branch is a compiled multiloader mod against MC 1.21.1 (NeoForge
     # 21.1.68 / Forge 52.0.28 / fabric-api 0.106.0+1.21.1) and every loader
@@ -40,3 +38,11 @@ targets:
     loaders: [fabric, forge, neoforge]
     java: 21
     displaySuffix: "[FABRIC + FORGE + NEOFORGE]"
+  # Ported to 1.20-1.20.1 (Architectury Loom, Java 17). Fabric + Forge only — NeoForge is
+  # dropped because Amendments has no 1.20.1 NeoForge build and MSL's 1.20 branch is
+  # Fabric+Forge only, so the double-gated integration can never satisfy on NeoForge there.
+  - branch: 1.20-1.20.1
+    mc: { start: "1.20", end: "1.20.1" }
+    loaders: [fabric, forge]
+    java: 17
+    displaySuffix: "[FABRIC + FORGE]"
