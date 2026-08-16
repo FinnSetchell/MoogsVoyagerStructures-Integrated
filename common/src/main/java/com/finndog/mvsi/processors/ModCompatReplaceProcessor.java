@@ -71,6 +71,6 @@ public class ModCompatReplaceProcessor extends StructureProcessor {
 
     @Override
     protected StructureProcessorType<?> getType() {
-        return MVSIProcessors.MOD_COMPAT_REPLACE.get();
+        return MVSIProcessors.MOD_COMPAT_REPLACE;
     }
 }
