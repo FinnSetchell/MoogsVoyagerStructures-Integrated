@@ -2,12 +2,12 @@
 
 ---
 
-## [2.0.0] - 2026-08-15
+## [2.0.0] - 2026-08-16
 
 ### Changed
 - MVSI now enhances Moog's Voyager Structures instead of overwriting it: integrated variants generate alongside the vanilla structures, chosen at random based on which supported mods are installed, so worlds stay varied and nothing breaks when a mod is missing
 - Supplementaries and Amendments are now optional — their variants appear when installed, and structures fall back to the vanilla versions when they are not
-- Rebuilt as a multiloader mod for Fabric, NeoForge, and Forge
+- Rebuilt as a multiloader mod for Fabric and Forge
 
 ### Added
 - Conditional structure variants for 80+ structures, gated on the installed mods
