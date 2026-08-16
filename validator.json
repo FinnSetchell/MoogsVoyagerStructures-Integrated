@@ -1,5 +1,11 @@
 {
   "namespace": "mvsintegrated",
-  "mc_versions": ["1.21", "1.21.1"],
-  "extra_ids": ["supplementaries:*", "amendments:*"]
+  "mc_versions": [
+    "1.20",
+    "1.20.1"
+  ],
+  "extra_ids": [
+    "supplementaries:*",
+    "amendments:*"
+  ]
 }
