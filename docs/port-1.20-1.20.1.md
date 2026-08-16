@@ -70,6 +70,11 @@ the Modrinth API (dep availability), and MVSI's own port surface.
 
 ## Phase 3 — Java code (small, scoped)
 
+- [ ] **Fold in the 2.0.1 crash fix** (from `1.21-datapack`): register the `mod_compat_replace`
+      processor via the mod-bus `RegisterEvent` on Forge (direct on Fabric), NOT a direct
+      `Registry.register` during construction — Forge 1.20.1 freezes the vanilla registries before
+      the mod constructor runs, same as NeoForge did on 1.21. `MVSIProcessors` becomes a data
+      holder + `bootstrap(BiConsumer)`; `getType()` returns the constant; drop `MVSICommon.init()`.
 - [ ] `ResourceLocation.fromNamespaceAndPath(…)` → `new ResourceLocation(…)` — 2 sites:
       `common/.../conditions/MvsiConditions.java:16`, `common/.../modinit/MVSIProcessors.java:35`.
 - [ ] `MapCodec` → `Codec` for the structure-processor path (`ModCompatReplaceProcessor`,

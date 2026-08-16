@@ -1,18 +1,63 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT' apply false
-    id 'net.neoforged.moddev' version '2.0.49-beta' apply false
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id "dev.architectury.loom" version "1.10-SNAPSHOT" apply false
 }
 
-// The release pipeline uploads the per-loader jars out of `{loader}/build/libs`,
-// but the release workflow still requires the ROOT `build/libs` to be non-empty
-// (`ls -la build/libs/` + an upload-artifact with if-no-files-found: error).
+architectury {
+    minecraft = rootProject.minecraft_version
+}
+
+subprojects {
+    apply plugin: "dev.architectury.loom"
+
+    loom {
+        silentMojangMappingsLicense()
+    }
+
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        mappings loom.officialMojangMappings()
+    }
+}
+
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
+
+    archivesBaseName = rootProject.archives_base_name
+    version = "${rootProject.mod_version}"
+    group = rootProject.maven_group
+
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = 'CurseForge'
+                    url = 'https://cursemaven.com'
+                }
+            }
+            filter { includeGroup 'curse.maven' }
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        options.release = rootProject.java_version as int
+    }
+
+    java {
+        withSourcesJar()
+    }
+}
+
+// Collect the per-loader release jars into the root build/libs so the v2 release workflow
+// (which runs `./gradlew build`, then uploads build/libs/*.jar with if-no-files-found: error)
+// finds them. Prefer remapJar (the real per-loader artifact) over the unremapped dev jar.
 def loaderProjectsForCollect = subprojects.findAll { it.name in ['fabric', 'neoforge', 'forge'] && new File(it.projectDir, 'build.gradle').exists() }
 
 tasks.register('collectJars', Copy) {
     loaderProjectsForCollect.each { sub ->
-        // Loom subprojects (Fabric) expose an unremapped `jar` (classifier "dev")
-        // that must NOT be distributed; the real release artifact is `remapJar`.
-        // Prefer remapJar when present, else the plain jar (NeoForge/Forge).
         def releaseTaskName = sub.tasks.findByName('remapJar') ? 'remapJar' : 'jar'
         dependsOn "${sub.path}:${releaseTaskName}"
         from(sub.tasks.named(releaseTaskName).flatMap { it.archiveFile })

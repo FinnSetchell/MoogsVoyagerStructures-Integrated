@@ -1,35 +1,40 @@
-plugins {
-    id 'multiloader-common'
-    id 'net.neoforged.moddev'
+architectury {
+    common(rootProject.enabled_platforms.split(","))
 }
 
-neoForge {
-    neoFormVersion = neo_form_version
-    def at = file('src/main/resources/META-INF/accesstransformer.cfg')
-    if (at.exists()) {
-        accessTransformers.from(at.absolutePath)
-    }
-}
-
-configurations {
-    commonJava {
-        canBeResolved = false
-        canBeConsumed = true
-    }
-    commonResources {
-        canBeResolved = false
-        canBeConsumed = true
-    }
-}
+// JAR naming includes the Minecraft version (fleet convention).
+archivesBaseName = "${rootProject.archives_base_name}-${rootProject.minecraft_version}"
 
 dependencies {
-    // Moog's Structure Lib (CurseForge project 1337167, version 1.21.1-3.0.0).
-    // The common module uses Mojang-mapped neoForm, so the NeoForge jar (also
-    // Mojang-mapped) is the correct artifact to compile the integration engine against.
-    compileOnly "curse.maven:moogs-structure-lib-1337167:${msl_neoforge_file}"
+    // fabric-loader for the @Environment annotations only — do NOT use other fabric classes here.
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+
+    // Moog's Structure Lib: the integration engine compiles against it. The Fabric jar is
+    // Mojang-mapped by Loom to match the common (Mojmap) sourceset; provided at runtime by each loader.
+    modCompileOnly "curse.maven:moogs-structure-lib-1337167:${rootProject.msl_fabric_file}"
 }
 
-artifacts {
-    commonJava sourceSets.main.java.sourceDirectories.singleFile
-    commonResources sourceSets.main.resources.sourceDirectories.singleFile
+processResources {
+    var expandProps = [
+        'version'                    : project.version,
+        'mod_id'                     : rootProject.mod_id,
+        'mod_name'                   : rootProject.mod_name,
+        'mc_version'                 : rootProject.minecraft_version,
+        'mod_description'            : rootProject.mod_description,
+        'mod_homepage'               : rootProject.mod_homepage,
+        'mod_sources'                : rootProject.mod_sources,
+        'mod_issues'                 : rootProject.mod_issues,
+        'mod_discord'                : rootProject.mod_discord,
+        'mod_kofi'                   : rootProject.mod_kofi,
+        'mod_curseforge'             : rootProject.mod_curseforge,
+        'mod_modrinth'               : rootProject.mod_modrinth,
+        'mod_releases'               : rootProject.mod_releases,
+        'structure_lib_version_range': rootProject.structure_lib_version_range,
+        'forge_loader_version_range' : rootProject.forge_loader_version_range,
+        'minecraft_version_range'    : rootProject.minecraft_version_range
+    ]
+    inputs.properties(expandProps)
+    filesMatching(['pack.mcmeta']) {
+        expand expandProps
+    }
 }

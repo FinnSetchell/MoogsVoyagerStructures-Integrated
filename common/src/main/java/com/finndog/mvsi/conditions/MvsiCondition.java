@@ -1,7 +1,6 @@
 package com.finndog.mvsi.conditions;
 
 import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.resources.ResourceLocation;
 
 /**
@@ -18,5 +17,5 @@ public interface MvsiCondition {
 
     ResourceLocation typeId();
 
-    MapCodec<? extends MvsiCondition> codec();
+    Codec<? extends MvsiCondition> codec();
 }

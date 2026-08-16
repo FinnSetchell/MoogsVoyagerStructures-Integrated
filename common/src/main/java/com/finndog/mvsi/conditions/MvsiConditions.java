@@ -1,7 +1,7 @@
 package com.finndog.mvsi.conditions;
 
 import com.finndog.mvsi.MVSICommon;
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.HashMap;
@@ -13,9 +13,9 @@ import java.util.Map;
 public final class MvsiConditions {
 
     public static final ResourceLocation MOD_LOADED =
-            ResourceLocation.fromNamespaceAndPath(MVSICommon.MODID, "mod_loaded");
+            new ResourceLocation(MVSICommon.MODID, "mod_loaded");
 
-    private static final Map<ResourceLocation, MapCodec<? extends MvsiCondition>> CODECS = new HashMap<>();
+    private static final Map<ResourceLocation, Codec<? extends MvsiCondition>> CODECS = new HashMap<>();
 
     static {
         CODECS.put(MOD_LOADED, ModLoadedCondition.CODEC);
@@ -23,7 +23,7 @@ public final class MvsiConditions {
 
     private MvsiConditions() {}
 
-    public static MapCodec<? extends MvsiCondition> codecById(ResourceLocation id) {
+    public static Codec<? extends MvsiCondition> codecById(ResourceLocation id) {
         return CODECS.get(id);
     }
 }

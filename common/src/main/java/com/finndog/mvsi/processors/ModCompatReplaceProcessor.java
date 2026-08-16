@@ -2,7 +2,7 @@ package com.finndog.mvsi.processors;
 
 import com.finndog.moogs_structures.utils.GeneralUtils;
 import com.finndog.mvsi.modinit.MVSIProcessors;
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -35,7 +35,7 @@ import java.util.Optional;
 public class ModCompatReplaceProcessor extends StructureProcessor {
 
     public record Entry(Block from, ResourceLocation to, Optional<ResourceLocation> ifRegistered) {
-        public static final MapCodec<Entry> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
+        public static final Codec<Entry> CODEC = RecordCodecBuilder.create(instance -> instance.group(
                 BuiltInRegistries.BLOCK.byNameCodec().fieldOf("from").forGetter(Entry::from),
                 ResourceLocation.CODEC.fieldOf("to").forGetter(Entry::to),
                 ResourceLocation.CODEC.optionalFieldOf("if_registered").forGetter(Entry::ifRegistered)
@@ -47,8 +47,8 @@ public class ModCompatReplaceProcessor extends StructureProcessor {
         }
     }
 
-    public static final MapCodec<ModCompatReplaceProcessor> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            Entry.CODEC.codec().listOf().fieldOf("replacements").forGetter(config -> config.replacements)
+    public static final Codec<ModCompatReplaceProcessor> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+            Entry.CODEC.listOf().fieldOf("replacements").forGetter(config -> config.replacements)
     ).apply(instance, ModCompatReplaceProcessor::new));
 
     private final List<Entry> replacements;
@@ -71,6 +71,6 @@ public class ModCompatReplaceProcessor extends StructureProcessor {
 
     @Override
     protected StructureProcessorType<?> getType() {
-        return MVSIProcessors.MOD_COMPAT_REPLACE.get();
+        return MVSIProcessors.MOD_COMPAT_REPLACE;
     }
 }
