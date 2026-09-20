@@ -2,7 +2,7 @@
 
 [![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D8LKA5N)
 
-[![Discord](https://img.shields.io/discord/869218732650688543?color=1A6E8A&label=DISCORD&style=for-the-badge)](https://discord.com/invite/S5nffJbuvA)
+[![Discord](https://img.shields.io/discord/869218732650688543?color=1A6E8A&label=DISCORD&style=for-the-badge)](https://moogsmods.com/discord?r=readme-mvsi)
 
 [![My projects](https://img.shields.io/badge/CurseForge-projects-1A6E8A?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/members/finndog_123/projects)
 
@@ -24,7 +24,7 @@ The goal of MVSI is to integrate as many mods as possible into Moog's Voyager St
 
 Currently only Supplementaries and Amendments are supported, so both are required. In the future we plan to expand support to many more mods, and no single mod will be required. MVSI will simply enhance structures with whatever compatible mods are present.
 
-Want to help integrate your favourite mod? Reach out on [Discord](https://discord.gg/S5nffJbuvA)!
+Want to help integrate your favourite mod? Reach out on [Discord](https://moogsmods.com/discord?r=readme-mvsi)!
 
 
 ![showcase](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/96023d00150142ea840a8c80a636de80.png)
@@ -64,7 +64,7 @@ View all modpacks using this mod [here](https://www.modpackindex.com/modpack/fin
 
 The best way to get a reply is to join the Discord server.
 
-- [Discord](https://discord.gg/S5nffJbuvA)
+- [Discord](https://moogsmods.com/discord?r=readme-mvsi)
 - [GitHub / Issue Tracker](https://github.com/finnsetchell/MoogsVoyagerStructures-Integrated)
 - [Ko-fi](https://ko-fi.com/finndog)
 
