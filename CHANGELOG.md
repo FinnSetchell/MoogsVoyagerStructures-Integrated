@@ -9,6 +9,9 @@
 - The small pillager tower's banners show their patterns again
 - Villagers now spawn in both large carts
 
+### Changed
+- Removed five houses that were plain copies of Moog's Voyager Structures' own, so those houses keep their villagers and animals again
+
 ---
 
 ## [2.0.0] - 2026-08-16
