@@ -5,6 +5,7 @@
 ## [2.0.2]
 
 ### Changed
+- Now requires Moog's Structure Lib 3.0.0 or newer
 - Removed five houses that were plain copies of Moog's Voyager Structures' own, so those houses keep their villagers and animals again
 
 ---
