@@ -3,8 +3,11 @@
   "additions": [
     {
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:supplementaries_amendments/lantern/small_acacia",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvsintegrated:1_21_0/supplementaries_amendments/lantern/small_acacia",
+        "locations": {
+          "1.21-1.21.1": "mvsintegrated:1_21_0/supplementaries_amendments/lantern/small_acacia"
+        },
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

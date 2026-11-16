@@ -3,8 +3,11 @@
   "additions": [
     {
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:supplementaries_amendments/ruins/log_ruin",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvsintegrated:1_21_0/supplementaries_amendments/ruins/log_ruin",
+        "locations": {
+          "1.21-1.21.1": "mvsintegrated:1_21_0/supplementaries_amendments/ruins/log_ruin"
+        },
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
