@@ -3,8 +3,11 @@
   "additions": [
     {
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:supplementaries_amendments/other_decoration/campsite",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/campsite",
+        "locations": {
+          "1.20-1.20.1": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/campsite"
+        },
         "processors": "minecraft:empty",
         "projection": "rigid"
       },

@@ -3,8 +3,11 @@
   "additions": [
     {
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:supplementaries_amendments/other_decoration/mixed_pile",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/mixed_pile",
+        "locations": {
+          "1.20-1.20.1": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/mixed_pile"
+        },
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -22,8 +25,11 @@
     },
     {
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:supplementaries_amendments/other_decoration/pumpkin_pile",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/pumpkin_pile",
+        "locations": {
+          "1.20-1.20.1": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/pumpkin_pile"
+        },
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
@@ -41,8 +47,11 @@
     },
     {
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "mvsintegrated:supplementaries_amendments/other_decoration/small_pumpkin_pile",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/small_pumpkin_pile",
+        "locations": {
+          "1.20-1.20.1": "mvsintegrated:1_20_0/supplementaries_amendments/other_decoration/small_pumpkin_pile"
+        },
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
