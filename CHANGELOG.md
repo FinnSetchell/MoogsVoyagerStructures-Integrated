@@ -2,6 +2,13 @@
 
 ---
 
+## [2.0.2]
+
+### Changed
+- Removed five houses that were plain copies of Moog's Voyager Structures' own, so those houses keep their villagers and animals again
+
+---
+
 ## [2.0.1] - 2026-08-16
 
 ### Fixed
