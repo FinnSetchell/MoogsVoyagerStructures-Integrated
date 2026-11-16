@@ -2,6 +2,15 @@
 
 ---
 
+## [2.0.1]
+
+### Fixed
+- Grass now shows in the paths, ruins, campsites and several houses
+- The small pillager tower's banners show their patterns again
+- Villagers now spawn in both large carts
+
+---
+
 ## [2.0.0] - 2026-08-16
 
 ### Changed
